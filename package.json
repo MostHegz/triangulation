@@ -1,5 +1,5 @@
 {
-  "name": "Macber",
+  "name": "triangulation",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.6",
+    "trilat": "^1.0.0"
+  }
 }
