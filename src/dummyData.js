@@ -189,7 +189,6 @@ export const dummyData = [
         ]
 
     },
-
     {
         uid: '48:4b:aa:d6:86:25',
         timestamp: 1583216300,
@@ -227,7 +226,5 @@ export const dummyData = [
             }
         ]
 
-    },
-
-
+    }
 ]

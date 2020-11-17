@@ -2,17 +2,14 @@ import _ from 'lodash';
 import {makeDataMap} from './makeDataMap.js';
 import {dummyData} from './dummyData.js';
 const {xValues, yValues, zValues} = makeDataMap(70,50,dummyData)
-var colorscaleValue = [
-  [0, '#3D9970'],
-  [1, '#001f3f']
-];
+
 var data = [{
   x: xValues,
   y: yValues,
   z: zValues,
   type: 'heatmap',
   // colorscale: colorscaleValue,
-  showscale: false
+  showscale: true
 }];
 
 var layout = {
@@ -30,33 +27,5 @@ var layout = {
     autosize: false
   }
 };
-
-// for ( var i = 0; i < yValues.length; i++ ) {
-//   for ( var j = 0; j < xValues.length; j++ ) {
-//     var currentValue = zValues[i][j];
-//     if (currentValue != 0.0) {
-//       var textColor = 'white';
-//     }else{
-//       var textColor = 'black';
-//     }
-//     var result = {
-//       xref: 'x1',
-//       yref: 'y1',
-//       x: xValues[j],
-//       y: yValues[i],
-//       text: zValues[i][j],
-//       font: {
-//         family: 'Arial',
-//         size: 12,
-//         color: 'rgb(50, 171, 96)'
-//       },
-//       showarrow: false,
-//       font: {
-//         color: textColor
-//       }
-//     };
-//     // layout.annotations.push(result);
-//   }
-// }
 
 Plotly.newPlot('myDiv', data, layout);
